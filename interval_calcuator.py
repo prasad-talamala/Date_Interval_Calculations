@@ -44,7 +44,7 @@ def is_valid_date(d):
 
 def get_interval_dates(startdate, enddate):
     list_of_dates = []
-    for d in range(startdate, enddate):
+    for d in range(startdate, enddate+1):
         if is_valid_date(str(d)):
             if get_fourth_saturday(str(d)) ^ is_saturday_and_multiple_of_five(str(d)):
                 list_of_dates.append(str(d))
